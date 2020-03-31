@@ -423,7 +423,7 @@ create trigger MUSIQUES_INSERT
 after insert on MUSIQUES
 for each row
 begin
-	insert into ARTICLES values (new.REF_ART, null, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
+	insert into ARTICLES values (new.REF_ART, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
 end //
 DELIMITER ;
 
@@ -456,7 +456,7 @@ create trigger FILMS_INSERT
 after insert on FILMS
 for each row
 begin
-	insert into ARTICLES values (new.REF_ART, null, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
+	insert into ARTICLES values (new.REF_ART, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
 end //
 DELIMITER ;
 
@@ -489,7 +489,7 @@ create trigger JEUX_INSERT
 after insert on JEUX
 for each row
 begin
-	insert into ARTICLES values (new.REF_ART, null, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
+	insert into ARTICLES values (new.REF_ART, new.NOM_ART, new.ARTISTE, new.DESC_ART, new.ANNEE_ART, new.PRIX_UNIT, new.QTE_STOCK);
 end //
 DELIMITER ;
 
@@ -626,7 +626,7 @@ insert into JEUX(REF_ART, PLATFORM_JEU, ARTISTE, GENRE_JEU, NOM_ART, DESC_ART, A
 	('J2', 'CD-i', 'Animation Magic', 'Action', 'Link: The Faces of Evil', 'Un jour au château d\'Hyrule, un mystérieux vieillard nommé Gwonam apparaît et prévient le Roi Harkinian que Ganon et ses fidèles se sont emparés de l\'île de Koridaï. Link décide d\'aller combattre Ganon et éliminer ses fidèles.', '1993-10-10', '2.50', 4),
 	('J3', 'Xbox One', 'Mojang', 'Sandbox', 'Minecraft', 'Le jeu plonge le joueur dans un monde créé dynamiquement, composé de blocs représentant différents matériaux formant diverses structures des animaux ou monstres. Le joueur peut modifier ce monde à volonté.', '2019-05-10', '4.80', 2),
 	('J4', 'Arcade', 'Konami', 'Sports', 'Track & Field', 'Le joueur contrôle un athlète dans six disciplines différentes : le 100 m, le saut en longueur, le lancer de javelot, le 110 m haies, le lancer de marteau et le saut en hauteur.', '1983-01-01', '2.89', 3);
-*/	
+*/
 
 
 -- *********************************************************************************
@@ -667,6 +667,7 @@ call FINALISATION_COMMANDE(1);
 
 select * from PANIERS;
 select * from SELECTIONNE;
+select * from H_SELECTIONNE;
 select * from COMMANDES;
 select * from ARCHIVE_SELECTION;
 
