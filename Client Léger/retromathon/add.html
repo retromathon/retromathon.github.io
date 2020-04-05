@@ -1,0 +1,422 @@
+<html>
+<head>
+  <title>Retromathon - Insérer</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="css/addcss.css" rel="stylesheet">
+  <script src="js/add.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<style>
+  .tableform{
+     width:190px;
+     margin-left:-20%;
+     margin-bottom:80px;
+  }
+
+</style>
+
+<body>
+
+
+<!-- TABLES -->
+
+
+  <div id="left" style="background-color: #7AA1D2">
+    <div class="table" id="administrateurs" onclick="show(this.id)"><br><p1>ADMINISTRATEURS</p1></div>
+    <div class="table" id="articles" onclick="show(this.id)"><br><p1>ARTICLES</p1></div>
+    <div class="table" id="clients" onclick="show(this.id)"><br><p1>CLIENTS</p1></div>
+    <div class="table" id="commandes" onclick="show(this.id)"><br><p1>COMMANDES</p1></div>
+    <div class="table" id="films" onclick="show(this.id)"><br><p1>FILMS</p1></div>
+    <div class="table" id="jeux" onclick="show(this.id)"><br><p1>JEUX</p1></div>
+    <div class="table" id="musiques" onclick="show(this.id)"><br><p1>MUSIQUES</p1></div>
+    <div class="table" id="newarticles" onclick="show(this.id)"><br><p1>NEWARTICLES</p1></div>
+    <div class="table" id="newfilms" onclick="show(this.id)"><br><p1>NEWFILMS</p1></div>
+    <div class="table" id="newjeux" onclick="show(this.id)"><br><p1>NEWJEUX</p1></div>
+    <div class="table" id="newmusiques" onclick="show(this.id)"><br><p1>NEWMUSIQUES</p1></div>
+    <div class="table" id="paniers" onclick="show(this.id)"><br><p1>PANIERS</p1></div>
+    <div class="table" id="selectionne" onclick="show(this.id)"><br><p1>SELECTIONNE</p1></div>
+    <div class="table" id="utilisateurs" onclick="show(this.id)"><br><p1>UTILISATEURS</p1></div>
+</div>
+
+  <div class="line"></div>
+
+  <div id="right">
+    <br><p2>Vous êtes en mode insertion de données. <a href="read.php">Passer en mode lecture</a></p2><br><p2>Un clic sur les tables affiche le formulaire correspondant.</p2><br><br>
+    <a href="index.php"><p2>Page d'accueil</p2></a><br>
+
+
+<!-- FORMULAIRES -->
+
+
+  <form class="tableform" id="administrateursta" method="POST" action="php/add.php">ADMINISTRATEURS
+  <center><br>
+    REF_USER<br>
+    <input type="text" name="adminrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    NOM_USER<br>
+    <input type="text" name="adminnomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    PRENOM_USER<br>
+    <input type="text" name="adminprenomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    EMAIL_USER<br>
+    <input type="text" name="adminemailuser" size="20"  maxlength="45" placeholder="Varchar"> <br><br>
+    MDP_USER<br>
+    <input type="text" name="adminmdpuser" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer1">
+  </center>
+  </form>
+
+  <form class="tableform" id="articlesta" method="POST" action="php/add.php">ARTICLES
+  <center><br>
+    REF_ART<br>
+    <input type="text" name="articlesrefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    REF_VE<br>
+    <input type="number" name="articlesrefve" size="20"  maxlength="4" placeholder="Int 4"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="articlesnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="articlesdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="articlesanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    PRIX_UNIT<br>
+    <input type="text" name="articlesprixunit" size="20"  maxlength="7" placeholder="Decimal 5,2"> <br><br>
+    QTE_STOCK<br>
+    <input type="number" name="articlesqtestock" size="20"  maxlength="2" placeholder="Int 2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer2">
+  </center>
+  </form>
+
+  <form class="tableform" id="clientsta" method="POST" action="php/add.php">CLIENTS
+  <center><br>
+    REF_USER<br>
+    <input type="text" name="clientsrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    ADRESSE_CLI<br>
+    <input type="text" name="clientsadressecli" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    CP_CLI<br>
+    <input type="number" name="clientscpcli" size="20"  maxlength="5" placeholder="Int 5"> <br><br>
+    VILLE_CLI<br>
+    <input type="text" name="clientsvillecli" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    TEL_CLI<br>
+    <input type="number" name="clientstelcli" size="20"  maxlength="10" placeholder="Int 10"> <br><br>
+    NOM_USER<br>
+    <input type="text" name="clientsnomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    PRENOM_USER<br>
+    <input type="text" name="clientsprenomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    EMAIL_USER<br>
+    <input type="text" name="clientsemailuser" size="20"  maxlength="45" placeholder="Varchar"> <br><br>
+    MDP_USER<br>
+    <input type="text" name="clientsmdpuser" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer3">
+  </center>
+  </form>
+
+  <form class="tableform" id="commandesta" method="POST" action="php/add.php">COMMANDES
+  <center><br>
+    REF_COM<br>
+    <input type="number" name="commandesrefcom" size="20"  maxlength="6" placeholder="Int 6"> <br><br>
+    REF_PANIER<br>
+    <input type="number" name="commandesrefpanier" size="20"  maxlength="6" placeholder="Int 6"> <br><br>
+    REF_USER<br>
+    <input type="text" name="commandesrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    DATE_COM<br>
+    <input type="text" name="commandesdatecom" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    MONTANT_HT<br>
+    <input type="text" name="commandesmontantht" size="20"  maxlength="80" placeholder="Decimal 7,2"> <br><br>
+    MONTANT_TVA<br>
+    <input type="text" name="commandesmontanttva" size="20"  maxlength="80" placeholder="Decimal 6,2"> <br><br>
+    MONTANT_TTC<br>
+    <input type="text" name="commandesmontantttc" size="20"  maxlength="80" placeholder="Decimal 7,2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer4">
+  </center>
+  </form>
+
+  <form class="tableform" id="filmsta" method="POST" action="php/add.php">FILMS
+  <center><br>
+    REF_ART<br>
+    <input type="text" name="filmsrefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    FORMAT_FILM<br>
+    <input type="text" name="filmsformatfilm" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    DUREE_FILM<br>
+    <input type="text" name="filmsdureefilm" size="20"  maxlength="8" placeholder="00:00:00"> <br><br>
+    NOM_REALISATEUR<br>
+    <input type="text" name="filmsnomrealisateur" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    NOM_ACTEUR<br>
+    <input type="text" name="filmsnomacteur" size="20"  maxlength="60" placeholder="Varchar"> <br><br>
+    GENRE_FILM<br>
+    <input type="text" name="filmsgenrefilm" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="filmsnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="filmsdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="filmsanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    PRIX_UNIT<br>
+    <input type="text" name="filmsprixunit" size="20"  maxlength="20" placeholder="Decimal 5,2"> <br><br>
+    QTE_STOCK<br>
+    <input type="number" name="filmsqtestock" size="20"  maxlength="2" placeholder="Int 2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer5">
+  </center>
+  </form>
+
+  <form class="tableform" id="jeuxta" method="POST" action="php/add.php">JEUX
+  <center><br>
+    REF_ART<br>
+    <input type="text" name="jeuxrefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    PLATFORM_JEU<br>
+    <input type="text" name="jeuxplatformjeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    STUDIO_JEU<br>
+    <input type="text" name="jeuxstudiojeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    GENRE_JEU<br>
+    <input type="text" name="jeuxgenrejeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="jeuxnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="jeuxdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="jeuxanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    PRIX_UNIT<br>
+    <input type="text" name="jeuxprixunit" size="20"  maxlength="20" placeholder="Decimal 5,2"> <br><br>
+    QTE_STOCK<br>
+    <input type="number" name="jeuxqtestock" size="20"  maxlength="2" placeholder="Int 2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer6">
+  </center>
+  </form>
+
+  <form class="tableform" id="musiquesta" method="POST" action="php/add.php">MUSIQUES
+  <center><br>
+    REF_ART<br>
+    <input type="text" name="musiquesrefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    FORMAT_MUS<br>
+    <input type="text" name="musiquesformatmus" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    COMPOS_MUS<br>
+    <input type="text" name="musiquescomposmus" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    CHANT_MUS<br>
+    <input type="text" name="musiqueschantmus" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    GENRE_MUS<br>
+    <input type="text" name="musiquesgenremus" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="musiquesnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="musiquesdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="musiquesanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    PRIX_UNIT<br>
+    <input type="text" name="musiquesprixunit" size="20"  maxlength="6" placeholder="Decimal 5,2"> <br><br>
+    QTE_STOCK<br>
+    <input type="number" name="musiquesqtestock" size="20"  maxlength="2" placeholder="Int 2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer7">
+  </center>
+  </form>
+
+  <form class="tableform" id="newarticlesta" method="POST" action="php/add.php">NEWARTICLES
+  <center><br>
+    REF_VE<br>
+    <input type="number" name="newarticlesrefve" size="20"  maxlength="4" placeholder="Int 4"> <br><br>
+    REF_ART<br>
+    <input type="text" name="newarticlesrefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    REF_USER<br>
+    <input type="text" name="newarticlesrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    REF_USER_1<br>
+    <input type="text" name="newarticlesrefuser1" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    DATE_VEN<br>
+    <input type="text" name="newarticlesdateven" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    NEW_VE<br>
+    <input type="number" name="newarticlesnewve" size="20"  maxlength="6" placeholder="Bool"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="newarticlesnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="newarticlesdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="newarticlesanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    DATE_VER<br>
+    <input type="text" name="newarticlesdatever" size="20"  maxlength="10" placeholder="AAAA-MM-JJ"> <br><br>
+    CONFIRM_VE<br>
+    <input type="number" name="newarticlesconfirmve" size="20"  maxlength="6" placeholder="Bool"> <br><br>
+    PRIX_VE<br>
+    <input type="text" name="newarticlesprixve" size="20"  maxlength="6" placeholder="Decimal 5,2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer8">
+  </center>
+  </form>
+
+  <form class="tableform" id="newfilmsta" method="POST" action="php/add.php">NEWFILMS
+  <center><br>
+    REF_VE<br>
+    <input type="number" name="newfilmsrefve" size="20"  maxlength="4" placeholder="Int 4"> <br><br>
+    FORMAT_FILM<br>
+    <input type="text" name="newfilmsformatfilm" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    DUREE_FILM<br>
+    <input type="text" name="newfilmsdureefilm" size="20"  maxlength="8" placeholder="00:00:00"> <br><br>
+    NOM_REALISATEUR<br>
+    <input type="text" name="newfilmsnomrealisateur" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    NOM_ACTEUR<br>
+    <input type="text" name="newfilmsnomacteur" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    GENRE_FILM<br>
+    <input type="text" name="newfilmsgenrefilm" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    DATE_VEN<br>
+    <input type="text" name="newfilmsdateven" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    NEW_VE<br>
+    <input type="number" name="newfilmsnewve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="newfilmsnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="newfilmsdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="newfilmsanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    DATE_VER<br>
+    <input type="text" name="newfilmsdatever" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    CONFIRM_VE<br>
+    <input type="number" name="newfilmsconfirmve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    PRIX_VE<br>
+    <input type="text" name="newfilmsprixve" size="20"  maxlength="20" placeholder="Decimal 5,2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer9">
+  </center>
+  </form>
+
+  <form class="tableform" id="newjeuxta" method="POST" action="php/add.php">NEWJEUX
+  <center><br>
+    REF_VE<br>
+    <input type="number" name="newjeuxrefve" size="20"  maxlength="4" placeholder="Int 4"> <br><br>
+    PLATFORM_JEU<br>
+    <input type="text" name="newjeuxplatformjeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    STUDIO_JEU<br>
+    <input type="text" name="newjeuxstudiojeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    GENRE_JEU<br>
+    <input type="text" name="newjeuxgenrejeu" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    DATE_VEN<br>
+    <input type="text" name="newjeuxdateven" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    NEW_VE<br>
+    <input type="number" name="newjeuxnewve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="newjeuxnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="newjeuxdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="newjeuxanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    DATE_VER<br>
+    <input type="text" name="newjeuxdatever" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    CONFIRM_VE<br>
+    <input type="number" name="newjeuxconfirmve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    PRIX_VE<br>
+    <input type="text" name="newjeuxprixve" size="20"  maxlength="20" placeholder="Decimal 5,2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer10">
+  </center>
+  </form>
+
+  <form class="tableform" id="newmusiquesta" method="POST" action="php/add.php">NEWMUSIQUES
+  <center><br>
+    REF_VE<br>
+    <input type="number" name="newmusiquesrefve" size="20"  maxlength="4" placeholder="Int 4"> <br><br>
+    FORMAT_MUS<br>
+    <input type="text" name="newmusiquesformatmus" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    COMPOS_MUS<br>
+    <input type="text" name="newmusiquescomposmus" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    CHANT_MUS<br>
+    <input type="text" name="newmusiqueschantmus" size="20"  maxlength="40" placeholder="Varchar"> <br><br>
+    GENRE_MUS<br>
+    <input type="text" name="newmusiquesgenremus" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    DATE_VEN<br>
+    <input type="text" name="newmusiquesdateven" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    NEW_VE<br>
+    <input type="number" name="newmusiquesnewve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    NOM_ART<br>
+    <input type="text" name="newmusiquesnomart" size="20"  maxlength="30" placeholder="Varchar"> <br><br>
+    DESC_ART<br>
+    <input type="text" name="newmusiquesdescart" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+    ANNEE_ART<br>
+    <input type="text" name="newmusiquesanneeart" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    DATE_VER<br>
+    <input type="text" name="newmusiquesdatever" size="20"  maxlength="10" placeholder="AAAA-MM-DD"> <br><br>
+    CONFIRM_VE<br>
+    <input type="number" name="newmusiquesconfirmve" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+    PRIX_VE<br>
+    <input type="text" name="newmusiquesprixve" size="20"  maxlength="20" placeholder="Decimal 5,2"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer11">
+  </center>
+  </form>
+
+  <form class="tableform" id="paniersta" method="POST" action="php/add.php">PANIERS
+  <center><br>
+    REF_PANIER<br>
+    <input type="number" name="paniersrefpanier" size="20"  maxlength="6" placeholder="Int 6"> <br><br>
+    REF_USER<br>
+    <input type="text" name="paniersrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    ETAT_PANIER<br>
+    <input type="number" name="paniersetatpanier" size="20"  maxlength="1" placeholder="Bool"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer12">
+  </center>
+  </form>
+
+  <form class="tableform" id="selectionneta" method="POST" action="php/add.php">SELECTIONNE
+  <center><br>
+    REF_ART<br>
+    <input type="text" name="selectionnerefart" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    REF_PANIER<br>
+    <input type="number" name="selectionnerefpanier" size="20"  maxlength="6" placeholder="Int 6"> <br><br>
+    QTE_CHOISI<br>
+    <input type="text" name="selectionneqtechoisi" size="20"  maxlength="1" placeholder="Int 1"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer13">
+  </center>
+  </form>
+
+  <form class="tableform" id="utilisateursta" method="POST" action="php/add.php">UTILISATEURS
+  <center><br>
+    REF_USER<br>
+    <input type="text" name="utilisateursrefuser" size="20"  maxlength="6" placeholder="Varchar"> <br><br>
+    NOM_USER<br>
+    <input type="text" name="utilisateursnomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    PRENOM_USER<br>
+    <input type="text" name="utilisateursprenomuser" size="20"  maxlength="20" placeholder="Varchar"> <br><br>
+    EMAIL_USER<br>
+    <input type="text" name="utilisateursemailuser" size="20"  maxlength="45" placeholder="Varchar"> <br><br>
+    MDP_USER<br>
+    <input type="text" name="utilisateursmdpuser" size="20"  maxlength="255" placeholder="Varchar"> <br><br>
+  <input type="submit" value="Envoyer" name="envoyer14">
+  </center>
+  </form>
+
+  </div>
+
+
+<!-- JAVASCRIPT -->
+
+
+  <script>
+
+  var tableArray=[
+    'administrateursta',
+    'articlesta',
+    'clientsta',
+    'commandesta',
+    'filmsta',
+    'jeuxta',
+    'musiquesta',
+    'newarticlesta',
+    'newfilmsta',
+    'newjeuxta',
+    'newmusiquesta',
+    'paniersta',
+    'selectionneta',
+    'utilisateursta',
+  ]
+
+  var arrayLength=tableArray.length;
+
+  function show(elem){
+    for(i=0;i<arrayLength;i++){
+      if(document.getElementById(tableArray[i]).style.display="inline-block"){
+        document.getElementById(tableArray[i]).style.display="none";
+      }
+    }
+    var x = document.getElementById(elem+"ta");
+
+      if (x.style.display = "none") {
+        x.style.display = "inline-block";
+      }
+  }
+
+  </script>
+
+</body>
+
+</html>

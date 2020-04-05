@@ -1,0 +1,104 @@
+body{
+  background-color: #f2f2f2;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.8em;
+  margin:0 auto;
+}
+
+p1{
+  font-family: 'Fjalla One', sans-serif;
+  font-size:32;
+  margin-left:15%;
+  text-shadow: -1px 1px #f2f2f2;
+}
+
+p2{
+  position:relative;
+  font-family: 'Arial';
+  font-size: 1em;
+}
+
+#left {
+  position: fixed;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+}
+
+#right{
+  overflow:scroll;
+  text-align:center;
+  position:fixed;
+  height:100%;
+  left:30%;
+  width:70%;
+
+}
+
+.table{
+  display:block;
+  position:relative;
+  left:0;
+  height:7%;
+  width:100%;
+  background: linear-gradient(to bottom, rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+  outline: 1px solid white;
+}
+
+.tabler{
+  display:block;
+  position:relative;
+  left:0;
+  height:7%;
+  width:100%;
+  background: linear-gradient(to bottom, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);
+  outline: 1px solid white;
+}
+
+.line{
+  top: 0;
+  left: 30%;
+  width: 5px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+}
+
+.tableform{
+  position:relative;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 15px;
+  top: 5%;
+  display: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.merci{
+  position:relative;
+  margin:auto;
+  text-align: center;
+  background-color:#fff;
+  padding: 50px;
+  border-radius: 15px;
+  top: 25%;
+  width:10%;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.table:hover, .tabler:hover{
+  background: rgba(0, 0, 0, 0.4);
+}
