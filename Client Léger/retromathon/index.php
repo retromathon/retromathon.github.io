@@ -53,7 +53,7 @@
 
     <div id="search">
       <div class="searchbar">
-        <input type="text" placeholder="Search..">
+        <!--<input type="text" placeholder="Search.."> -->
       </div>
     </div>
 
