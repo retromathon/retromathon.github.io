@@ -88,6 +88,7 @@
         $adresse = $_POST['adresse'];
         $ville = $_POST['ville'];
         $cdp = $_POST['cdp'];
+        $nbCom = 0;
 
         $req = "SELECT count(*) + 1 from utilisateurs";
         $prep = $dbh->query($req);
@@ -101,9 +102,9 @@
           $_SESSION["active"] = true;
           $_SESSION["msg"] = true;
 
-          $req = ("INSERT INTO clients () VALUES (?,?,?,?,?,?,?,?,?);");
+          $req = ("INSERT INTO clients () VALUES (?,?,?,?,?,?,?,?,?,?);");
           $sql = ($dbh->prepare($req));
-          $sql -> execute(array(dechex($ref[0]), $adresse, $cdp, $ville, $tel, $nom, $prenom, $mail, $mdp));
+          $sql -> execute(array(dechex($ref[0]), $adresse, $cdp, $ville, $tel, $nom, $prenom, $nbCom, $mail, $mdp));
 
           header('Location: index.php');
           exit();
