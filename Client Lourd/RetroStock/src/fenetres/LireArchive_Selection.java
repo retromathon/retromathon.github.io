@@ -11,16 +11,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import requetes.Requete;
-import tables.AdminAbstractModel;
-import tables.Administrateurs;
+import tables.Archive_SelectionAbstractModel;
+import tables.Archive_Selection;
 
 import java.awt.BorderLayout;
 
-public class LireAdministrateur {
+public class LireArchive_Selection {
 
 	public JFrame frame;
 	private JTable table;
-	private List<Administrateurs> lesAdmins;
+	private List<Archive_Selection> lesArchiveSel;
 
 	/**
 	 * Launch the application.
@@ -29,7 +29,7 @@ public class LireAdministrateur {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LireAdministrateur window = new LireAdministrateur();
+					LireArchive_Selection window = new LireArchive_Selection();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class LireAdministrateur {
 	/**
 	 * Create the application.
 	 */
-	public LireAdministrateur() {
+	public LireArchive_Selection() {
 		initialize();
 	}
 
@@ -54,16 +54,16 @@ public class LireAdministrateur {
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		Requete Adminliste = new Requete();
+		Requete Archive_Selliste = new Requete();
 		
 		try {
-			lesAdmins = Adminliste.lireTousLesAdmins();
+			lesArchiveSel = Archive_Selliste.lireTousLesArchive_Selection();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		AdminAbstractModel cliab = new AdminAbstractModel(lesAdmins);
+		Archive_SelectionAbstractModel cliab = new Archive_SelectionAbstractModel(lesArchiveSel);
 		
 		table = new JTable(cliab);
 		
@@ -76,13 +76,13 @@ public class LireAdministrateur {
 			public void actionPerformed(ActionEvent e) {
 				
 				int index = table.getSelectedRow();
-				Administrateurs adminex = lesAdmins.get(index);
+				Archive_Selection archisel = lesArchiveSel.get(index);
 				
 				try {
-					Adminliste.supprimerAdmin(adminex);
-					lesAdmins.remove(index);
+					Archive_Selliste.supprimerArchive_Selection(archisel);
+					lesArchiveSel.remove(index);
 					
-					AdminAbstractModel table2 = new AdminAbstractModel(lesAdmins);
+					Archive_SelectionAbstractModel table2 = new Archive_SelectionAbstractModel(lesArchiveSel);
 					table.setModel(table2);
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block

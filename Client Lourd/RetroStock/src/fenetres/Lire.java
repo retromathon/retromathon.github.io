@@ -83,9 +83,13 @@ public class Lire {
 				int index = list.getSelectedIndex();
 				String nomTable = listOptions[index];
 
-					
 			    if(nomTable == "Administrateurs") {
 			    	LireAdministrateur window = new LireAdministrateur();
+					window.frame.setVisible(true);	
+			    }	
+
+			    if(nomTable == "Archive_Selection") {
+			    	LireArchive_Selection window = new LireArchive_Selection();
 					window.frame.setVisible(true);	
 			    }	
 			}
